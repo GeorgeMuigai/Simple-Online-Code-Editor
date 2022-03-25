@@ -10,12 +10,16 @@ var right = document.querySelector('.right');
 var iframe = document.querySelector('.iframe');
 
 window.addEventListener('load', ()=>{
+    // this code is executed when the page fully loaded
     editor.textContent = "<h2>Hello, Welcome To My Code Editor </h2>" + 
     "<p>Write Your code And click run</p>";
+    
+    // automatically click the run button when the page is loaded
+    run.click();
 });
 
+// code for the light theme
 light.addEventListener('click', ()=>{
-    //console.log("Light clicked");
     document.body.style.background = "#fff";
     document.body.style.color = "#000";
     right.style.border = "1px solid #333"
@@ -23,8 +27,8 @@ light.addEventListener('click', ()=>{
     left.style.border = "1px solid #333"
 });
 
+// code for the dark theme
 dark.addEventListener('click', ()=>{
-    //console.log("dark clicked");
     document.body.style.background = "#272822";
     document.body.style.color = "#fff";
     left.style.border = "1px solid #fff";
@@ -32,8 +36,8 @@ dark.addEventListener('click', ()=>{
     right.style.background = "rgb(190, 190, 190)"
 });
 
+// this is executed when the run button is clicked
 run.addEventListener('click', ()=>{
-    //console.log("run clicked");
     const html = editor.textContent;
     iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
 });
