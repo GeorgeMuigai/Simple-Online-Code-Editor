@@ -11,7 +11,7 @@ var iframe = document.querySelector('.iframe');
 
 window.addEventListener('load', ()=>{
     editor.textContent = "<h2>Hello, Welcome To My Code Editor </h2>" + 
-    "<p>Click on run to run the code</p>";
+    "<p>Write Your code And click run</p>";
 });
 
 light.addEventListener('click', ()=>{
