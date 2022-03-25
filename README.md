@@ -1,4 +1,4 @@
-# Simple-Code-Online-Editor
+# Simple-HTML/CSS-Online-Code-Editor
 
 This is a simple code editor for html and css
 
