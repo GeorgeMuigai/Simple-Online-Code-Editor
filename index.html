@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Code Editor</title>
+</head>
+<body>
+    <div class="editor-tools">
+        <Button class="btn btn-dark">Dark Mode</Button>
+        <Button class="btn btn-light">Light Mode</Button>
+        <Button class="btn btn-run"><i class="fa fa-play"></i> Run</Button>
+        <div class="live">
+            <label for="Live">Live - </label>
+            <input type="checkbox" id="checked">
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="editor" contenteditable="">
+                write your code here.....
+            </div>
+        </div>
+        <div class="bar"></div>
+        <div class="right">
+                <iframe src="" frameborder="0" class="iframe">
+                </iframe>
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+</html>
