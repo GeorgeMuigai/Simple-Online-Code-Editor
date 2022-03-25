@@ -19,6 +19,7 @@ light.addEventListener('click', ()=>{
     document.body.style.background = "#fff";
     document.body.style.color = "#000";
     right.style.border = "1px solid #333"
+    right.style.background = "#fff"
     left.style.border = "1px solid #333"
 });
 
@@ -28,6 +29,7 @@ dark.addEventListener('click', ()=>{
     document.body.style.color = "#fff";
     left.style.border = "1px solid #fff";
     right.style.border = "1px solid #fff";
+    right.style.background = "rgb(190, 190, 190)"
 });
 
 run.addEventListener('click', ()=>{
