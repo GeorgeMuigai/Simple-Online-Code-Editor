@@ -9,14 +9,9 @@ var left = document.querySelector('.left');
 var right = document.querySelector('.right');
 var iframe = document.querySelector('.iframe');
 
-livebtn.addEventListener('click', ()=>{
-    //console.log(check.checked);
-    if(check.checked == true)
-    {
-        check.checked = false;
-    }else{
-        check.checked = true;
-    }
+window.addEventListener('load', ()=>{
+    editor.textContent = "<h2>Hello, Welcome To My Code Editor </h2>" + 
+    "<p>Click on run to run the code</p>";
 });
 
 light.addEventListener('click', ()=>{
@@ -43,28 +38,17 @@ run.addEventListener('click', ()=>{
 
 
 
-// the below code contains an error
-
-/*const drag = (e) =>{
-    e.preventDefault();
-    document.selection ? document.selection.empty() :
-    window.getSelection().removeAllRanges();
-    left.style.width = (e.pageX - bar.offsetWidth / 3) + "px";
-    editor.resize();
-}
-// code to drag the bar
-bar.addEventListener('mousedown', ()=>{
-    document.addEventListener('mousemove', (e)=>{
-        e.preventDefault();
-        document.selection ? document.selection.empty() :
-        window.getSelection().removeAllRanges();
-        left.style.width = (e.pageX - bar.offsetWidth / 1) + "px";
-        editor.resize();
-    });
+// live code
+livebtn.addEventListener('click', ()=>{
+    //console.log(check.checked);
+    if(check.checked == true)
+    {
+        check.checked = false;
+    }else{
+        check.checked = true;
+        editor.addEventListener('keyup', () =>{
+            const html = editor.textContent;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+        });
+    }
 });
-
-// code to stop the dragging
-bar.addEventListener('mouseup', ()=>{
-    document.removeEventListener('mousemove', drag);
-});
-*/
